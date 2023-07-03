@@ -14,7 +14,7 @@ const getAll = async (req, res, next) => {
 
 const add = async (req, res, next) => {
 	const { _id } = req.student;
-	if (!id) {
+	if (!_id) {
 		return next(createError(400, 'Bad Request'));
 	}
 	const result = await Word.create({ ...req.body, owner: _id });
